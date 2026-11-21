@@ -1,19 +1,23 @@
-# BEATs 音频事件识别
+# BEATs 音频事件识别 · ONNX
 
-BEATs 音频事件识别模型（ONNX，int4 / int8 两档量化）。
+上游模型权重的 ONNX 转换分发，供 HiTi_code 的「设置 → 本地模型」页按需下载。**非官方渠道**，与上游项目及 HiTi_code 项目均无隶属关系。
 
-HiTi 只在内置包里带最基础的那一个模型，其余全部按需下载。本仓库提供「设置 → 本地模型」页里可选的高阶模型，**每个变体单独一个资产，只下你要的那一档**。
+- 上游：<https://github.com/microsoft/unilm/tree/master/beats>
+- 模型卡：<https://huggingface.co/microsoft/beats>
+- 许可证：MIT，全文见 LICENSE；权利归属与修改说明见 NOTICE.md
 
 ## 下载
 
+每个变体单独一个资产，只下要用的那一档：
+
 | 变体 | 体积 | 直接下载 |
 | --- | --- | --- |
-| int4 | 70.5 MB | [beats-int4.zip](https://github.com/xixi3548942758-design/hiti-model-beats/releases/download/v1.0/beats-int4.zip) |
-| int8 | 101.8 MB | [beats-int8.zip](https://github.com/xixi3548942758-design/hiti-model-beats/releases/download/v1.0/beats-int8.zip) |
+| int4 | 70.5 MB | [beats-int4.zip](https://github.com/xixi3548942758-design/BEATs-ONNX-for-HiTi_code/releases/download/v1.0/beats-int4.zip) |
+| int8 | 101.8 MB | [beats-int8.zip](https://github.com/xixi3548942758-design/BEATs-ONNX-for-HiTi_code/releases/download/v1.0/beats-int8.zip) |
 
 ## 目录结构
 
-解压后目录名与 HiTi `AI_model` 下同名目录一致，直接放进去即可：
+解压后目录名与 HiTi 的 AI_model 目录下同名目录一致，直接放进去即可：
 
 ```
 BEATs/
@@ -21,7 +25,7 @@ BEATs/
   beats_labels.json  beats_names.json  meta.json
 ```
 
-## 说明
+## 使用与再分发
 
 - 同一模型的不同量化档（int4 / int8）只选一个放进目录，不要同时放。
-- 原模型由 PaddlePaddle / SenseVoice / BEATs 官方发布，本仓库仅为 ONNX 量化转换后的分发，遵循各自原始许可证。
+- 再分发时必须保留 LICENSE 与 NOTICE.md，保留模型名称，并注明上游出处。
